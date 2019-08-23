@@ -1,12 +1,12 @@
 import React from 'react'
-import { withController, ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
+import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 import { Row, Col, Container } from 'react-bootstrap'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import bar from './images/bar.jpg'
 import drinks from './images/drinks.jpg'
 import './App.css'
 
-function App () {
+export default function App () {
   return (
     <div className='App'>
       <ParallaxProvider>
@@ -21,18 +21,16 @@ function App () {
             height: '400px'
           }}
         />
-      </ParallaxProvider>
-      <h1>Barhouse Nürnberg</h1>
-      <div className='content spacer'>
-        <p>Im Barhouse Nürnberg findest du auf mehr als 200m² das perfekte Erlebnis für einen gelungenen Abend.</p>
-        <p>Wir bieten dir über 40 verschiedene alkoholische und antialkoholische Longdrinks, Cocktails, Shots und vieles mehr.</p>
-      </div>
-      <ParallaxProvider>
+        <h1>Barhouse Nürnberg</h1>
+        <div className='content spacer'>
+          <p>Im Barhouse Nürnberg findest du auf mehr als 200m² das perfekte Erlebnis für einen gelungenen Abend.</p>
+          <p>Wir bieten dir über 40 verschiedene alkoholische und anti-alkoholische Longdrinks, Cocktails, Shots und vieles mehr.</p>
+        </div>
         <ParallaxBanner
           layers={[
             {
               image: drinks,
-              amount: 0.6
+              amount: 0.4
             }
           ]}
           style={{
@@ -100,5 +98,3 @@ function App () {
     </div>
   )
 }
-
-export default withController(App)
