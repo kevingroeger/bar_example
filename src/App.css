@@ -12,11 +12,12 @@
   user-select: none;
   position: absolute;
   width: 100vw;
-  top: 7rem;
+  top: 8rem;
   font-size: 3.5rem;
   text-shadow: #181818 2px 2px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
 .content {
