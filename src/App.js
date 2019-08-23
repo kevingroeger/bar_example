@@ -23,8 +23,9 @@ export default function App () {
         />
         <h1>Barhouse Nürnberg</h1>
         <div className='content spacer'>
-          <p>Im Barhouse Nürnberg findest du auf mehr als 200m² das perfekte Erlebnis für einen gelungenen Abend.</p>
+          <p>Im Barhouse Nürnberg findest du auf mehr als 120m² das perfekte Erlebnis für einen gelungenen Abend.</p>
           <p>Wir bieten dir über 40 verschiedene alkoholische und anti-alkoholische Longdrinks, Cocktails, Shots und vieles mehr.</p>
+          <p>Komm einfach vorbei und überzeug dich selbst!</p>
         </div>
         <ParallaxBanner
           layers={[
@@ -39,7 +40,7 @@ export default function App () {
         />
       </ParallaxProvider>
       <div className='content'>
-        <h5>Öffnungszeiten:</h5>
+        <h3>Öffnungszeiten:</h3>
         <table>
           <tbody>
             <tr>
@@ -68,7 +69,7 @@ export default function App () {
             </tr>
             <tr>
               <th>Sonntag:</th>
-              <td>11:00 Uhr - 00:00 Uhr</td>
+              <td>14:00 Uhr - 22:00 Uhr</td>
             </tr>
           </tbody>
         </table>
