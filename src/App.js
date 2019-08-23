@@ -2,8 +2,8 @@ import React from 'react'
 import { withController, ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 import { Row, Col, Container } from 'react-bootstrap'
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import bar from './images/bar.png'
-import drinks from './images/drinks.png'
+import bar from './images/bar.jpg'
+import drinks from './images/drinks.jpg'
 import './App.css'
 
 function App () {
