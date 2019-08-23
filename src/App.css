@@ -81,10 +81,9 @@ a:hover, .fa-envelope:hover {
 }
 
 .socialmedia i {
-    padding: 1rem 1rem 0 0;
+    padding: .5rem .8rem 1rem 0;
     font-size: 2rem;
     cursor: pointer;
-    margin-bottom: 1rem;
 }
 
 .fa-facebook-square {
@@ -97,4 +96,16 @@ a:hover, .fa-envelope:hover {
 
 .fa-instagram {
     color: #FF592D;
+}
+
+.less-space h5 {
+    margin-bottom: 1.5rem;
+}
+
+.less-space p {
+    line-height: .5rem;
+}
+
+.evenless-space {
+    line-height: 0;
 }

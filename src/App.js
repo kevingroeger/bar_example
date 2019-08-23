@@ -76,16 +76,16 @@ export default function App () {
       <div className='footer'>
         <Container fluid>
           <Row>
-            <Col>
+            <Col className={'less-space'}>
               <h5>Barhouse Nürnberg:</h5>
-              <p> Musterstraße 123</p>
               <p> Max Mustermann</p>
+              <p> Musterstraße 123</p>
               <p> 90400 Nürnberg</p>
             </Col>
-            <Col>
+            <Col className={'evenless-space'}>
               <h5>Kontakt:</h5>
               <p><i className='fas fa-phone-square-alt' /> 0911 / 01234567</p>
-              <a href='mailto:kontakt@example.com'><i className='fas fa-envelope' /> kontakt@example.com</a>
+              <p><a href='mailto:kontakt@example.com'><i className='fas fa-envelope' /> kontakt@example.com</a></p>
               <div className='socialmedia'>
                 <i className='fab fa-facebook-square' />
                 <i className='fab fa-twitter-square' />
