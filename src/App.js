@@ -52,7 +52,7 @@ export default function App () {
             : theme === 'burlywood' ? burlywood
               : theme === 'lightgrey' ? lightgrey
                 : theme === 'lightyellow' ? lightyellow
-                  : 'black'}>
+                  : null}>
         <div className={'sideDiv'}>
           <button type={'button'} className={'darkTheme'} onClick={() => setTheme('black')} />
           <button type={'button'} className={'lightgrey'} onClick={() => setTheme('lightgrey')} />

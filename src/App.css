@@ -11,12 +11,10 @@
   position: absolute;
   width: 100vw;
   top: 8rem;
-  font-size: 3.5rem;
   text-shadow: #181818 2px 2px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 1rem;
   color: white;
 }
 
@@ -151,4 +149,65 @@ a:hover, .fa-envelope:hover {
 
 .lightyellow {
     background-color: lightyellow;
+}
+
+@media only screen and (max-width: 290px) {
+    .App h1 {
+        letter-spacing: normal;
+        font-size: 1.75rem;
+    }
+    .sideDiv button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (min-width: 290px) and (max-width: 370px) {
+    .App h1 {
+        letter-spacing: normal;
+        font-size: 2.5rem;
+    }
+    .sideDiv button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (min-width: 371px) and (max-width: 450px) {
+    .App h1 {
+        letter-spacing: normal;
+        font-size: 3rem;
+    }
+    .sideDiv button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 649px) {
+    .App h1 {
+        letter-spacing: .75rem;
+        font-size: 3rem;
+    }
+    .sideDiv button {
+        height: 1.25rem;
+        width: 1.25rem;
+        border-radius: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 650px) {
+    .App h1 {
+        letter-spacing: 1rem;
+        font-size: 3.5rem;
+    }
+    .sideDiv button {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 2rem;
+    }
 }
