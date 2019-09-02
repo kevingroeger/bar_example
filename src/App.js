@@ -12,8 +12,8 @@ export default function App () {
     backgroundColor: '#181818',
     color: 'white'
   }
-  const lightgrey = {
-    backgroundColor: 'lightgrey',
+  const linen = {
+    backgroundColor: 'linen',
     color: 'black'
   }
   const firebrick = {
@@ -21,27 +21,18 @@ export default function App () {
     color: 'white'
   }
 
-  const burlywood = {
-    backgroundColor: 'burlywood',
-    color: 'black'
-  }
-
-  const lightyellow = {
-    backgroundColor: 'lightyellow',
-    color: 'black'
-  }
-
-  const firebrickText = {
-    color: 'firebrick',
-    textShadow: 'white 1px 1px'
-  }
-  const lightgreyText = {
-    color: 'lightgrey',
+  const linenText = {
+    color: 'linen',
     textShadow: 'black 2px 2px'
   }
-  const burlywoodText = {
-    color: 'burlywood',
-    textShadow: 'black 2px 2px'
+
+  const whiteBorder = {
+    borderTop: '1px white solid',
+    borderBottom: '1px white solid'
+  }
+  const blackBorder = {
+    borderTop: '1px black solid',
+    borderBottom: '1px black solid'
   }
 
   return (
@@ -49,15 +40,11 @@ export default function App () {
       <div className='App' style={
         theme === 'black' ? darkTheme
           : theme === 'firebrick' ? firebrick
-            : theme === 'burlywood' ? burlywood
-              : theme === 'lightgrey' ? lightgrey
-                : theme === 'lightyellow' ? lightyellow
-                  : null}>
+            : theme === 'linen' ? linen
+              : null}>
         <div className={'sideDiv'}>
           <button type={'button'} className={'darkTheme'} onClick={() => setTheme('black')} />
-          <button type={'button'} className={'lightgrey'} onClick={() => setTheme('lightgrey')} />
-          <button type={'button'} className={'lightyellow'} onClick={() => setTheme('lightyellow')} />
-          <button type={'button'} className={'burlywood'} onClick={() => setTheme('burlywood')} />
+          <button type={'button'} className={'linen'} onClick={() => setTheme('linen')} />
           <button type={'button'} className={'firebrick'} onClick={() => setTheme('firebrick')} />
         </div>
         <ParallaxProvider>
@@ -72,13 +59,8 @@ export default function App () {
               height: '400px'
             }}
           />
-          <h1 style={
-            theme === 'lightgrey' ? lightgreyText
-              : theme === 'firebrick' ? firebrickText
-                : theme === 'burlywood' ? burlywoodText
-                  : null
-          }>Barhouse Nürnberg</h1>
-          <div className='content spacer'>
+          <h1 style={linenText}>Barhouse Nürnberg</h1>
+          <div className='content spacer' style={theme === 'linen' ? blackBorder : whiteBorder}>
             <p>Im Barhouse Nürnberg findest du auf mehr als 120m² das perfekte Erlebnis für einen gelungenen Abend.</p>
             <p>Wir bieten dir über 40 verschiedene alkoholische und anti-alkoholische Longdrinks, Cocktails, Shots und vieles mehr.</p>
             <p>Komm einfach vorbei und überzeug dich selbst!</p>
@@ -95,7 +77,7 @@ export default function App () {
             }}
           />
         </ParallaxProvider>
-        <div className='content'>
+        <div className='content spacedown' style={theme === 'linen' ? blackBorder : whiteBorder}>
           <h3>Öffnungszeiten:</h3>
           <table>
             <tbody>

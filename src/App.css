@@ -65,7 +65,6 @@ h5 {
     font-weight: 100;
     text-align: left;
     color: white;
-    margin-top: 3.5rem;
     border-top: #fff 1px solid;
     background: #181818;
 }
@@ -139,16 +138,12 @@ a:hover, .fa-envelope:hover {
     background-color: firebrick;
 }
 
-.burlywood {
-    background-color: burlywood;
+.linen {
+    background-color: linen;
 }
 
-.lightgrey {
-    background-color: lightgrey;
-}
-
-.lightyellow {
-    background-color: lightyellow;
+.spacedown {
+    padding-bottom: 3.5rem;
 }
 
 @media only screen and (max-width: 290px) {
