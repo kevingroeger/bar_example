@@ -1,13 +1,23 @@
 import React, { useState } from 'react'
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Toast, ToastHeader, ToastBody } from 'react-bootstrap'
+import { useSpring, animated } from 'react-spring'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import bar from './images/bar.jpg'
 import drinks from './images/drinks.jpg'
 import './App.css'
 
 export default function App () {
   const [theme, setTheme] = useState('black')
+  const [show, setShow] = useState(true)
+  const contentProps = useSpring({
+    opacity: show ? 1 : 0,
+    from: {
+      opacity: show ? 0 : 1
+    }
+  })
+
   const darkTheme = {
     backgroundColor: '#181818',
     color: 'white'
@@ -43,9 +53,26 @@ export default function App () {
             : theme === 'linen' ? linen
               : null}>
         <div className={'sideDiv'}>
-          <button type={'button'} className={'darkTheme'} onClick={() => setTheme('black')} />
-          <button type={'button'} className={'linen'} onClick={() => setTheme('linen')} />
-          <button type={'button'} className={'firebrick'} onClick={() => setTheme('firebrick')} />
+          <ul>
+            <li><button type={'button'} className={'darkTheme'} onClick={() => setTheme('black')} /></li>
+            <li><button type={'button'} className={'linen'} onClick={() => setTheme('linen')} /></li>
+            <li><button type={'button'} className={'firebrick'} onClick={() => setTheme('firebrick')} /></li>
+          </ul>
+        </div>
+        <div className='sideToast'>
+          {show &&
+            <animated.div style={contentProps}>
+              <Toast autohide delay={7500} show={show} onClose={() => setShow(!show)} animation>
+                <ToastHeader>
+                  <strong className='mr-auto'>Theme</strong>
+                </ToastHeader>
+                <ToastBody>
+                  <i className='fas fa-arrow-alt-circle-left' />{' '}
+                  Wählen Sie hier eine andere Farbpalette aus!
+                </ToastBody>
+              </Toast>
+            </animated.div>
+          }
         </div>
         <ParallaxProvider>
           <ParallaxBanner

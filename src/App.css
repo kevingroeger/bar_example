@@ -124,6 +124,20 @@ a:hover, .fa-envelope:hover {
     background: none;
 }
 
+.sideDiv ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sideToast {
+    color: black;
+    position: fixed;
+    z-index: 1200;
+    left: 3rem;
+    top: 19.5%;
+}
+
 .sideDiv button {
     height: 1rem;
     width: 1rem;
@@ -205,4 +219,8 @@ a:hover, .fa-envelope:hover {
         width: 1rem;
         border-radius: 2rem;
     }
+}
+
+.sideDiv button {
+    outline: none;
 }
